@@ -48,12 +48,12 @@ public class MainViewController implements Initializable {
 	}
 
 	@Override
-	public void initialize(URL uri, ResourceBundle rs) {
+	public void initialize(URL uri, ResourceBundle rb) {
 		// TODO Auto-generated method stub
 
 	}
 
-	private synchronized<T> void loadView(String absoluteName, Consumer<T> initializingAction) {
+	private synchronized <T> void loadView(String absoluteName, Consumer<T> initializingAction) {
 		try {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
 		VBox newVbox = loader.load();
