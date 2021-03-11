@@ -19,15 +19,15 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import model.entities.Department;
+import model.entities.Seller;
 import model.exceptions.ValidationException;
-import model.services.DepartmentService;
+import model.services.SellerService;
 
-public class DepartmentFormController implements Initializable {
+public class SellerFormController implements Initializable {
 	
-	private DepartmentService service;
+	private SellerService service;
 	
-	private Department entity;
+	private Seller entity;
 	
 	private List<DataChangeListener> dataChangeListeners = new ArrayList<>();
 	
@@ -51,11 +51,11 @@ public class DepartmentFormController implements Initializable {
 		dataChangeListeners.add(listener);
 	}
 	
-	public void setDepartment (Department entity) {
+	public void setSeller (Seller entity) {
 		this.entity = entity;
 	}
 	
-	public void setDepartmentService(DepartmentService service) {
+	public void setSellerService(SellerService service) {
 		this.service = service;
 	}
 	
@@ -87,8 +87,8 @@ public class DepartmentFormController implements Initializable {
  		}
 	}
 
-	private Department getFormData() {
-		Department obj = new Department();
+	private Seller getFormData() {
+		Seller obj = new Seller();
 		
 		ValidationException exception = new ValidationException("Validation error");
 		
